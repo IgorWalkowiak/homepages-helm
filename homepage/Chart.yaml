@@ -2,7 +2,7 @@ apiVersion: v2
 name: homepage
 description: A modern, fully static, fast, secure fully proxied, highly customizable application dashboard with integrations for over 100 services and translations into multiple languages.
 type: application
-version: 1.7.2
+version: 1.7.3
 appVersion: "v1.7.0"
 keywords:
   - homepage
@@ -15,4 +15,4 @@ sources:
   - https://github.com/gethomepage/homepage
 maintainers:
   - name: UnknownIQ
-icon: https://github.com/gethomepage/homepage/raw/main/public/homepage.png
+icon: https://raw.githubusercontent.com/gethomepage/homepage/dev/public/mstile-310x310.png
