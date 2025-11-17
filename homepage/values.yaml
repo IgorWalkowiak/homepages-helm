@@ -1,4 +1,5 @@
 replicaCount: 1
+revisionHistoryLimit: 3
 
 image:
   repository: ghcr.io/gethomepage/homepage
@@ -48,6 +49,25 @@ ingress:
           - path: /
             pathType: Prefix
     tls: []
+
+# Gateway API HTTPRoute
+route:
+  enabled: false
+  annotations: {}
+  # Gateway parent references
+  parentRefs:
+    - name: gateway
+      namespace: default
+      sectionName: https
+  # Hostnames for the route
+  hostnames:
+    - homepage.local
+  # Route rules
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
 
 env:
   - name: LOG_TARGETS
