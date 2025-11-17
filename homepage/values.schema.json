@@ -6,6 +6,11 @@
       "type": "integer",
       "minimum": 1
     },
+    "revisionHistoryLimit": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of old ReplicaSets to retain for rollback"
+    },
     "image": {
       "type": "object",
       "properties": {
@@ -78,6 +83,41 @@
           "type": "object"
         }
       }
+    },
+    "route": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "description": "Enable Gateway API HTTPRoute"
+        },
+        "annotations": {
+          "type": "object",
+          "description": "HTTPRoute annotations"
+        },
+        "parentRefs": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "description": "Gateway parent references"
+        },
+        "hostnames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Hostnames for the route"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "description": "Route rules"
+        }
+      },
+      "description": "Gateway API HTTPRoute configuration"
     },
     "ingress": {
       "type": "object",

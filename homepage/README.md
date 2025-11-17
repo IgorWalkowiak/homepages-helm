@@ -14,10 +14,23 @@ This chart bootstraps a [Homepage](https://github.com/gethomepage/homepage) depl
 
 ## Installing the Chart
 
+First, add the Helm repository:
+
+```bash
+helm repo add unknowniq https://unknowniq.github.io/helm-charts/
+helm repo update
+```
+
 To install the chart with the release name `my-homepage`:
 
 ```bash
-helm install my-homepage ./chart
+helm install my-homepage unknowniq/homepage
+```
+
+Or with custom values:
+
+```bash
+helm install my-homepage unknowniq/homepage -f my-values.yaml
 ```
 
 The command deploys Homepage on the Kubernetes cluster with default configuration. The [Parameters](#parameters) section lists the parameters that can be configured during installation.
