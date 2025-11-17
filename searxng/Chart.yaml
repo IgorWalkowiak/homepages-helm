@@ -18,5 +18,5 @@ icon: https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src
 dependencies:
   - name: valkey
     version: "0.7.1"
-    repository: https://valkey.io/valkey-helm/
+    repository: https://valkey-io.github.io/valkey-helm/
     condition: valkey.enabled
