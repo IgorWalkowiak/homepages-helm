@@ -37,6 +37,7 @@ service:
   type: ClusterIP
   port: 3000
   annotations: {}
+  # nodePort: 30000  # Only used when type is NodePort (range: 30000-32767)
 
 ingress:
   main:
